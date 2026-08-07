@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Áridos en Mendoza | Arena, Ripio y Estabilizado - Cantera Palumbo</title>
 <meta name="description" content="Extracción y venta de áridos en Anchoris, Luján de Cuyo. Arena, ripio, estabilizado y tierra con stock constante. Entrega en obra o retiro en cantera y depósito. +40 años de trayectoria.">
+<link rel="icon" type="image/png" href="uploads/LOGO-NUEVO-768x426.png">
 <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
 <script src="./support.js"></script>
@@ -25,6 +26,8 @@
   <style id="__om-edit-overrides"></style>
   <style>
     body { margin: 0; }
+    .cp-product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 760px) { .cp-product-grid { grid-template-columns: 1fr; } }
     a { color: #5f6f3d; text-underline-offset: 3px; }
     a:hover { color: #3d4a27; }
     .cp-grayscale { filter: grayscale(1) contrast(1.1); }
@@ -226,16 +229,16 @@
       </div>
       <div style="margin-bottom:16px;">
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 20px;">RETIRO Y ENTREGA</h6>
-        <div style="display:flex;flex-wrap:wrap;gap:24px;">
-          <div style="display:flex;flex-direction:column;width:280px;">
+        <div class="cp-product-grid" style="display:grid;gap:24px;">
+          <div style="display:flex;flex-direction:column;">
             <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-cantera" shape="rect" placeholder="Foto: carga en cantera" alt="Carga en cantera Anchoris"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Retiro en cantera</div>
           </div>
-          <div style="display:flex;flex-direction:column;width:280px;">
+          <div style="display:flex;flex-direction:column;">
             <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-deposito" shape="rect" placeholder="Foto: depósito minorista" alt="Carga en depósito minorista de Godoy Cruz"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Retiro en depósito</div>
           </div>
-          <div style="display:flex;flex-direction:column;width:280px;">
+          <div style="display:flex;flex-direction:column;">
             <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-entrega-obra" shape="rect" placeholder="Foto: camión 6m3 en obra" alt="Entrega en obras particulares con camión 6m3"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Entrega directa en obra</div>
           </div>
@@ -243,16 +246,16 @@
       </div>
       <div>
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 20px;">ALQUILER DE EQUIPOS</h6>
-        <div style="display:flex;flex-wrap:wrap;gap:24px;">
-          <div style="display:flex;flex-direction:column;width:280px;">
+        <div class="cp-product-grid" style="display:grid;gap:24px;">
+          <div style="display:flex;flex-direction:column;">
             <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-bateas" shape="rect" placeholder="Foto: batea" alt="Alquiler de bateas"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Alquiler de batea</div>
           </div>
-          <div style="display:flex;flex-direction:column;width:280px;">
+          <div style="display:flex;flex-direction:column;">
             <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-camion-6x4" shape="rect" placeholder="Foto: camión 6x4 con volcadora" alt="Alquiler de camiones 6x4 con volcadora"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Alquiler de camión 6x4</div>
           </div>
-          <div style="display:flex;flex-direction:column;width:280px;">
+          <div style="display:flex;flex-direction:column;">
             <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;background:#141311;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:24px;gap:14px;">
               <div style="font-weight:900;font-size:18px;color:#efeee9;">¿Necesitás otro equipo?</div>
               <div style="font-size:13px;color:rgba(239,238,233,0.68);">Consultanos por WhatsApp y te decimos qué tenemos disponible.</div>
