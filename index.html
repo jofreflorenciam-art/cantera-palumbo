@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Áridos en Mendoza | Arena, Ripio y Estabilizado - Cantera Palumbo</title>
 <meta name="description" content="Extracción y venta de áridos en Anchoris, Luján de Cuyo. Arena, ripio, estabilizado y tierra con stock constante. Entrega en obra o retiro en cantera y depósito. +40 años de trayectoria.">
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
 <script src="./support.js"></script>
 <template id="__bundler_thumbnail" data-bg-color="#141311">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -41,8 +43,6 @@
     @media (max-width: 900px) {
       .cp-desktop-nav, .cp-desktop-cta { display: none; }
       .cp-mobile-btn { display: flex; }
-      .cp-hero-grid { grid-template-columns: 1fr !important; height: auto !important; }
-      .cp-hero-img { height: 320px !important; }
       .cp-qs-grid { grid-template-columns: 1fr !important; min-height: auto !important; }
       .cp-qs-img { height: 280px !important; }
       .cp-steps-grid { grid-template-columns: 1fr !important; row-gap: 32px; }
@@ -84,38 +84,33 @@
     </sc-if>
   </header>
 
-  <!-- HERO — full-bleed split, spec-sheet strip -->
-  <section>
-    <div class="cp-hero-grid" style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:stretch;">
-      <div style="background:#141311;color:#efeee9;display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,88px);">
-        <div style="font-size:12px;font-weight:800;letter-spacing:0.16em;color:#9dab74;margin-bottom:28px;">EXTRACCIÓN Y VENTA DE ÁRIDOS · MENDOZA</div>
-        <h1 style="font-weight:900;font-size:clamp(32px,4.6vw,54px);line-height:1.02;letter-spacing:-0.02em;margin:0 0 22px;">Cantera Palumbo: áridos para obras que no pueden esperar.</h1>
-        <p style="font-size:clamp(17px,1.5vw,21px);color:rgba(239,238,233,0.68);max-width:480px;margin:0 0 36px;">Arena, ripio, estabilizado y tierra con stock permanente. Retiro en cantera o depósito, o entrega directa en obra.</p>
-        <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link" style="display:inline-flex;align-items:center;gap:10px;background:#5f6f3d;color:#fff;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;padding:18px 30px;width:fit-content;">
-          Pedir cotización por WhatsApp
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-      <div class="cp-hero-img" style="display:flex;flex-direction:column;width:100%;min-width:0;overflow:hidden;">
-        <div style="aspect-ratio:16/9;max-height:440px;overflow:hidden;width:100%;min-width:0;background:#000;">
-          <video autoplay muted loop playsinline preload="metadata" style="width:100%;height:100%;display:block;object-fit:cover;background:#000;"><source src="uploads/video-cantera-palumbo-1-b4667e84.mp4" type="video/mp4"></video>
-        </div>
-        <div class="cp-marquee" style="flex:1;min-height:90px;overflow:hidden;background:#141311;padding:10px 0;width:100%;min-width:0;">
-          <div class="cp-marquee-track" style="display:flex;gap:10px;height:100%;width:max-content;animation:cp-scroll-hero 22s linear infinite;">
-            <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-1" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-2" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-3" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-4" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-5" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-6" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-1b" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-2b" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-3b" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-4b" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-5b" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
-            <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-6b" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
-          </div>
-        </div>
+  <!-- HERO — full-bleed video de fondo -->
+  <section style="position:relative;min-height:640px;overflow:hidden;background:#141311;color:#efeee9;display:flex;flex-direction:column;justify-content:center;">
+    <video autoplay muted loop playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"><source src="uploads/video-cantera-palumbo-1-b4667e84.mp4" type="video/mp4"></video>
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,19,17,0.82) 0%,rgba(20,19,17,0.55) 45%,rgba(20,19,17,0.25) 100%);"></div>
+    <div style="position:relative;z-index:1;padding:clamp(56px,8vw,88px) clamp(24px,6vw,88px);max-width:760px;">
+      <div style="font-size:12px;font-weight:800;letter-spacing:0.16em;color:#9dab74;margin-bottom:28px;">EXTRACCIÓN Y VENTA DE ÁRIDOS · MENDOZA</div>
+      <h1 style="font-weight:900;font-size:clamp(32px,4.6vw,54px);line-height:1.02;letter-spacing:-0.02em;margin:0 0 22px;">Cantera Palumbo: áridos para obras que no pueden esperar.</h1>
+      <p style="font-size:clamp(17px,1.5vw,21px);color:rgba(239,238,233,0.78);max-width:480px;margin:0 0 36px;">Arena, ripio, estabilizado y tierra con stock permanente. Retiro en cantera o depósito, o entrega directa en obra.</p>
+      <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link" style="display:inline-flex;align-items:center;gap:10px;background:#5f6f3d;color:#fff;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;padding:18px 30px;width:fit-content;">
+        Pedir cotización por WhatsApp
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="cp-marquee" style="position:relative;z-index:1;min-height:90px;overflow:hidden;background:rgba(20,19,17,0.85);padding:10px 0;">
+      <div class="cp-marquee-track" style="display:flex;gap:10px;height:100%;width:max-content;animation:cp-scroll-hero 22s linear infinite;">
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-1" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-2" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-3" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-4" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-5" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-6" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-1b" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-2b" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-3b" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-4b" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-5b" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-6b" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
       </div>
     </div>
     <div style="display:flex;flex-wrap:wrap;border-top:2px solid rgba(20,19,17,0.28);border-bottom:2px solid rgba(20,19,17,0.28);">
@@ -138,16 +133,6 @@
     </div>
   </section>
 
-  <!-- CONOCÉ LA CANTERA — full-bleed video de fondo -->
-  <section style="position:relative;min-height:640px;overflow:hidden;background:#141311;display:flex;align-items:center;justify-content:center;">
-    <video autoplay muted loop playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"><source src="uploads/video-cantera-palumbo2.mp4" type="video/mp4"></video>
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,17,0.35) 0%,rgba(20,19,17,0.15) 40%,rgba(20,19,17,0.65) 100%);"></div>
-    <div style="position:relative;z-index:1;text-align:center;color:#efeee9;padding:28px 40px;background:rgba(20,19,17,0.72);">
-      <h6 style="font-size:12px;font-weight:800;letter-spacing:0.16em;color:#9dab74;margin:0 0 20px;">CONOCÉ LA CANTERA</h6>
-      <h2 style="font-weight:900;font-size:clamp(30px,4.4vw,58px);line-height:1.04;letter-spacing:-0.02em;margin:0;max-width:820px;">Extracción propia a cielo abierto en Anchoris.</h2>
-    </div>
-  </section>
-
   <!-- QUIÉNES SOMOS -->
   <section id="nosotros" style="border-top:2px solid rgba(20,19,17,0.28);">
     <div class="cp-qs-grid" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:520px;">
@@ -157,6 +142,16 @@
         <h2 style="font-weight:900;font-size:clamp(28px,3.2vw,40px);line-height:1.06;letter-spacing:-0.018em;margin:0 0 24px;max-width:440px;">Más de 40 años extrayendo áridos de calidad en Anchoris.</h2>
         <p style="font-size:16px;color:rgba(239,238,233,0.68);margin:0;max-width:440px;">Somos una empresa familiar dedicada a la construcción, con atención tanto a grandes empresas como a pequeños consumidores. Contamos con una gran flota de equipos de primera marca para atender las necesidades de cada cliente.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- CONOCÉ LA CANTERA — full-bleed video de fondo -->
+  <section style="border-top:2px solid rgba(20,19,17,0.28);position:relative;min-height:640px;overflow:hidden;background:#141311;display:flex;align-items:center;justify-content:center;">
+    <video autoplay muted loop playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"><source src="uploads/video-cantera-palumbo2.mp4" type="video/mp4"></video>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,17,0.35) 0%,rgba(20,19,17,0.15) 40%,rgba(20,19,17,0.65) 100%);"></div>
+    <div style="position:relative;z-index:1;text-align:center;color:#efeee9;padding:28px 40px;background:rgba(20,19,17,0.72);">
+      <h6 style="font-size:12px;font-weight:800;letter-spacing:0.16em;color:#9dab74;margin:0 0 20px;">CONOCÉ LA CANTERA</h6>
+      <h2 style="font-weight:900;font-size:clamp(30px,4.4vw,58px);line-height:1.04;letter-spacing:-0.02em;margin:0;max-width:820px;">Extracción propia a cielo abierto en Anchoris.</h2>
     </div>
   </section>
 
@@ -219,10 +214,60 @@
     </div>
   </section>
 
+  <!-- LOGÍSTICA Y SERVICIOS -->
+  <section id="servicios">
+    <div style="max-width:1600px;margin:0 auto;padding:clamp(56px,8vw,120px) 32px;">
+      <div class="cp-num-grid" style="display:grid;grid-template-columns:minmax(160px,240px) minmax(0,1fr);gap:40px;margin-bottom:48px;">
+        <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">03</div>
+        <div>
+          <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 16px;">LOGÍSTICA Y SERVICIOS</h6>
+          <h2 style="font-weight:900;font-size:clamp(30px,3.4vw,48px);line-height:1.06;letter-spacing:-0.015em;margin:0;max-width:680px;">Todo lo que necesitás para mover material, en un solo lugar.</h2>
+        </div>
+      </div>
+      <div style="margin-bottom:16px;">
+        <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 20px;">RETIRO Y ENTREGA</h6>
+        <div style="display:flex;flex-wrap:wrap;gap:24px;">
+          <div style="display:flex;flex-direction:column;width:280px;">
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-cantera" shape="rect" placeholder="Foto: carga en cantera" alt="Carga en cantera Anchoris"></image-slot></div>
+            <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Retiro en cantera</div>
+          </div>
+          <div style="display:flex;flex-direction:column;width:280px;">
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-deposito" shape="rect" placeholder="Foto: depósito minorista" alt="Carga en depósito minorista de Godoy Cruz"></image-slot></div>
+            <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Retiro en depósito</div>
+          </div>
+          <div style="display:flex;flex-direction:column;width:280px;">
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-entrega-obra" shape="rect" placeholder="Foto: camión 6m3 en obra" alt="Entrega en obras particulares con camión 6m3"></image-slot></div>
+            <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Entrega directa en obra</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 20px;">ALQUILER DE EQUIPOS</h6>
+        <div style="display:flex;flex-wrap:wrap;gap:24px;">
+          <div style="display:flex;flex-direction:column;width:280px;">
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-bateas" shape="rect" placeholder="Foto: batea" alt="Alquiler de bateas"></image-slot></div>
+            <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Alquiler de batea</div>
+          </div>
+          <div style="display:flex;flex-direction:column;width:280px;">
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-camion-6x4" shape="rect" placeholder="Foto: camión 6x4 con volcadora" alt="Alquiler de camiones 6x4 con volcadora"></image-slot></div>
+            <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Alquiler de camión 6x4</div>
+          </div>
+          <div style="display:flex;flex-direction:column;width:280px;">
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;background:#141311;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:24px;gap:14px;">
+              <div style="font-weight:900;font-size:18px;color:#efeee9;">¿Necesitás otro equipo?</div>
+              <div style="font-size:13px;color:rgba(239,238,233,0.68);">Consultanos por WhatsApp y te decimos qué tenemos disponible.</div>
+              <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link cp-btn-primary" style="display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;padding:12px 18px;">Pedir cotización por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECTORES -->
   <section style="border-top:2px solid rgba(20,19,17,0.28);background:#141311;color:#efeee9;">
     <div class="cp-num-grid" style="max-width:1600px;margin:0 auto;padding:clamp(56px,8vw,120px) 32px;display:grid;grid-template-columns:minmax(160px,240px) minmax(0,1fr);gap:40px;">
-      <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">03</div>
+      <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">04</div>
       <div>
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#9dab74;margin:0 0 16px;">A QUIÉN LE VENDEMOS</h6>
         <h2 style="font-weight:900;font-size:clamp(30px,3.8vw,54px);line-height:1.06;letter-spacing:-0.015em;margin:0 0 28px;max-width:760px;">¿Sos hormigonera, constructora, desarrollista o arquitecto? Contactanos.</h2>
@@ -236,7 +281,7 @@
   <section>
     <div style="max-width:1600px;margin:0 auto;padding:clamp(56px,8vw,120px) 32px;">
       <div class="cp-num-grid" style="display:grid;grid-template-columns:minmax(160px,240px) minmax(0,1fr);gap:40px;margin-bottom:48px;">
-        <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">04</div>
+        <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">05</div>
         <div>
           <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 16px;">CÓMO COMPRAR</h6>
           <h2 style="font-weight:900;font-size:clamp(30px,3.4vw,48px);line-height:1.06;letter-spacing:-0.015em;margin:0;max-width:640px;">De la consulta a la obra, en cuatro pasos.</h2>
@@ -288,7 +333,7 @@
   <section id="contacto" style="border-top:2px solid rgba(20,19,17,0.28);background:#e4e2da;">
     <div style="max-width:1600px;margin:0 auto;padding:clamp(56px,8vw,120px) 32px;">
       <div class="cp-num-grid" style="display:grid;grid-template-columns:minmax(160px,240px) minmax(0,1fr);gap:40px;margin-bottom:48px;">
-        <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">05</div>
+        <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">06</div>
         <div>
           <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 16px;">CONTACTO</h6>
           <h2 style="font-weight:900;font-size:clamp(30px,3.4vw,48px);line-height:1.06;letter-spacing:-0.015em;margin:0 0 16px;max-width:680px;">Cantera y depósito, a un mensaje de distancia.</h2>
@@ -317,7 +362,7 @@
   <!-- FAQ -->
   <section style="border-top:2px solid rgba(20,19,17,0.28);">
     <div class="cp-num-grid" style="max-width:1600px;margin:0 auto;padding:clamp(56px,8vw,120px) 32px;display:grid;grid-template-columns:minmax(160px,240px) minmax(0,1fr);gap:40px;">
-      <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">06</div>
+      <div style="font-weight:900;font-size:clamp(80px,9.5vw,140px);line-height:0.9;color:rgba(95,111,61,0.16);">07</div>
       <div style="max-width:760px;">
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 16px;">PREGUNTAS FRECUENTES</h6>
         <h2 style="font-weight:900;font-size:clamp(30px,3.4vw,48px);line-height:1.06;letter-spacing:-0.015em;margin:0 0 32px;">Lo que preguntan antes de pedir.</h2>
