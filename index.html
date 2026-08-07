@@ -139,7 +139,7 @@
   <!-- QUIÉNES SOMOS -->
   <section id="nosotros" style="border-top:2px solid rgba(20,19,17,0.28);">
     <div class="cp-qs-grid" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:520px;">
-      <div class="cp-grayscale cp-qs-img" style="min-height:100%;"><image-slot id="quienes-somos" shape="rect" placeholder="Foto: equipo / flota de la empresa" alt="Equipo y flota de Cantera Palumbo"></image-slot></div>
+      <div class="cp-qs-img" style="min-height:100%;"><image-slot id="quienes-somos" shape="rect" placeholder="Foto: equipo / flota de la empresa" alt="Equipo y flota de Cantera Palumbo"></image-slot></div>
       <div style="background:#141311;color:#efeee9;display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,80px);">
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#9dab74;margin:0 0 20px;">QUIÉNES SOMOS</h6>
         <h2 style="font-weight:900;font-size:clamp(28px,3.2vw,40px);line-height:1.06;letter-spacing:-0.018em;margin:0 0 24px;max-width:440px;">Más de 40 años extrayendo áridos de calidad en Anchoris.</h2>
@@ -204,7 +204,7 @@
         <div class="cp-marquee-track" style="display:flex;width:max-content;animation:cp-scroll-products 34s linear infinite;">
           <sc-for list="{{ productsLoop }}" as="p" hint-placeholder-count="12">
             <a href="Productos.dc.html" class="cp-link cp-prod-card" style="display:flex;flex-direction:column;width:280px;flex:none;margin:0 8px;">
-              <div class="cp-grayscale" style="aspect-ratio:4/3;transition:filter .25s;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);"><image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.placeholder }}" alt="{{ p.alt }}"></image-slot></div>
+              <div style="aspect-ratio:4/3;transition:filter .25s;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);"><image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.placeholder }}" alt="{{ p.alt }}"></image-slot></div>
               <div style="padding:24px;">
                 <div style="font-weight:800;font-size:13px;color:rgba(20,19,17,0.4);margin-bottom:8px;">{{ p.n }}</div>
                 <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">{{ p.name }}</div>
