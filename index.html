@@ -44,6 +44,8 @@
     @keyframes cp-scroll-products { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .cp-prod-card:hover .cp-grayscale { filter: none; }
     @media (max-width: 900px) {
+      .cp-header-logo { height: 48px !important; }
+      .cp-totop { display: none !important; }
       .cp-desktop-nav, .cp-desktop-cta { display: none; }
       .cp-mobile-btn { display: flex; }
       .cp-qs-grid { grid-template-columns: 1fr !important; min-height: auto !important; }
@@ -64,7 +66,7 @@
   <header style="position:sticky;top:0;z-index:50;background:#ffffff;border-bottom:2px solid rgba(20,19,17,0.28);">
     <div style="max-width:1600px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:32px;">
       <a href="index.html" class="cp-link" style="display:flex;align-items:center;gap:16px;margin-right:auto;">
-        <img src="uploads/LOGO-NUEVO-768x426.png" alt="Cantera Palumbo" style="height:84px;width:auto;display:block;" />
+        <img class="cp-header-logo" src="uploads/LOGO-NUEVO-768x426.png" alt="Cantera Palumbo" style="height:84px;width:auto;display:block;" />
       </a>
       <nav class="cp-desktop-nav" style="align-items:center;gap:40px;font-size:16px;">
         <a href="index.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Inicio</a>
@@ -90,7 +92,7 @@
 
   <!-- HERO — full-bleed video de fondo -->
   <section class="cp-video-hero" style="position:relative;min-height:640px;overflow:hidden;background:#141311;color:#efeee9;display:flex;flex-direction:column;justify-content:center;">
-    <img src="uploads/foto_portada_web_palumbo.png" alt="Vista aérea de la cantera Palumbo en Anchoris, camiones cargando áridos" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.18) brightness(0.82) saturate(0.92);"/>
+    <img src="uploads/img/portada-cantera-palumbo.webp" fetchpriority="high" alt="Vista aérea de la cantera Palumbo en Anchoris, camiones cargando áridos" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.18) brightness(0.82) saturate(0.92);"/>
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,19,17,0.82) 0%,rgba(20,19,17,0.55) 45%,rgba(20,19,17,0.25) 100%);"></div>
     <div style="position:relative;z-index:1;padding:clamp(56px,8vw,88px) clamp(24px,6vw,88px);max-width:760px;">
       <div style="font-size:12px;font-weight:800;letter-spacing:0.16em;color:#9dab74;margin-bottom:28px;">EXTRACCIÓN Y VENTA DE ÁRIDOS · MENDOZA</div>
@@ -103,36 +105,36 @@
     </div>
     <div class="cp-marquee" style="position:relative;z-index:1;min-height:90px;overflow:hidden;background:rgba(20,19,17,0.85);padding:10px 0;">
       <div class="cp-marquee-track" style="display:flex;gap:10px;height:100%;width:max-content;animation:cp-scroll-hero 22s linear infinite;">
-        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-1" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-2" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-3" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-4" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-5" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-6" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-1b" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-2b" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-3b" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-4b" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-5b" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
-        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-6b" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-1" src="uploads/img/hero-strip-1.webp" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-2" src="uploads/img/hero-strip-2.webp" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-3" src="uploads/img/hero-strip-3.webp" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-4" src="uploads/img/hero-strip-4.webp" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-5" src="uploads/img/hero-strip-5.webp" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;"><image-slot id="hero-strip-6" src="uploads/img/hero-strip-6.webp" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-1b" src="uploads/img/hero-strip-1.webp" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-2b" src="uploads/img/hero-strip-2.webp" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-3b" src="uploads/img/hero-strip-3.webp" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-4b" src="uploads/img/hero-strip-4.webp" shape="rect" placeholder="Foto: cargadora" alt="Cargadora trabajando en cantera Palumbo, Anchoris"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-5b" src="uploads/img/hero-strip-5.webp" shape="rect" placeholder="Foto: camión tolva" alt="Camión tolva cargando áridos"></image-slot></div>
+        <div style="flex:none;width:160px;height:100%;" aria-hidden="true"><image-slot id="hero-strip-6b" src="uploads/img/hero-strip-6.webp" shape="rect" placeholder="Foto: cantera" alt="Vista de cantera a cielo abierto en Anchoris"></image-slot></div>
       </div>
     </div>
     <div style="display:flex;flex-wrap:wrap;border-top:2px solid rgba(20,19,17,0.28);border-bottom:2px solid rgba(20,19,17,0.28);">
       <div style="flex:1;min-width:220px;padding:22px 32px;border-right:1px solid rgba(20,19,17,0.28);display:flex;align-items:center;gap:16px;">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5f6f3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M14.5 3.5 20 9M4 20l7-7M14.5 3.5 5 13l-1.5 5.5L9 17l9.5-9.5a2.121 2.121 0 0 0-3-3z"/></svg>
-        <div><span style="font-weight:900;font-size:clamp(18px,1.8vw,26px);">+40</span><span style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(20,19,17,0.6);"> años en el rubro</span></div>
+        <div><span style="font-weight:900;font-size:clamp(18px,1.8vw,26px);">+40</span><span style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(20,19,17,0.72);"> años en el rubro</span></div>
       </div>
       <div style="flex:1;min-width:220px;padding:22px 32px;border-right:1px solid rgba(20,19,17,0.28);display:flex;align-items:center;gap:16px;">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5f6f3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
-        <div><span style="font-weight:900;font-size:clamp(18px,1.8vw,26px);">Cantera</span><span style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(20,19,17,0.6);"> propia</span></div>
+        <div><span style="font-weight:900;font-size:clamp(18px,1.8vw,26px);">Cantera</span><span style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(20,19,17,0.72);"> propia</span></div>
       </div>
       <div style="flex:1;min-width:220px;padding:22px 32px;border-right:1px solid rgba(20,19,17,0.28);display:flex;align-items:center;gap:16px;">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5f6f3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg>
-        <div><span style="font-weight:900;font-size:clamp(18px,1.8vw,26px);">Stock</span><span style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(20,19,17,0.6);"> permanente</span></div>
+        <div><span style="font-weight:900;font-size:clamp(18px,1.8vw,26px);">Stock</span><span style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(20,19,17,0.72);"> permanente</span></div>
       </div>
       <div style="flex:1;min-width:220px;padding:22px 32px;display:flex;align-items:center;gap:16px;">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5f6f3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <div><span style="font-weight:900;font-size:clamp(18px,1.8vw,26px);">2</span><span style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(20,19,17,0.6);"> puntos de retiro</span></div>
+        <div><span style="font-weight:900;font-size:clamp(18px,1.8vw,26px);">2</span><span style="font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(20,19,17,0.72);"> puntos de retiro</span></div>
       </div>
     </div>
   </section>
@@ -140,18 +142,18 @@
   <!-- QUIÉNES SOMOS -->
   <section id="nosotros" style="border-top:2px solid rgba(20,19,17,0.28);">
     <div class="cp-qs-grid" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:520px;">
-      <div class="cp-qs-img" style="min-height:100%;"><image-slot id="quienes-somos" shape="rect" placeholder="Foto: equipo / flota de la empresa" alt="Equipo y flota de Cantera Palumbo"></image-slot></div>
+      <div class="cp-qs-img" style="min-height:100%;"><image-slot id="quienes-somos" src="uploads/img/quienes-somos.webp" shape="rect" placeholder="Foto: equipo / flota de la empresa" alt="Equipo y flota de Cantera Palumbo"></image-slot></div>
       <div style="background:#141311;color:#efeee9;display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,80px);">
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#9dab74;margin:0 0 20px;">QUIÉNES SOMOS</h6>
         <h2 style="font-weight:900;font-size:clamp(28px,3.2vw,40px);line-height:1.06;letter-spacing:-0.018em;margin:0 0 24px;max-width:440px;">Más de 40 años extrayendo áridos de calidad en Anchoris.</h2>
-        <p style="font-size:16px;color:rgba(239,238,233,0.68);margin:0;max-width:440px;">Somos una empresa familiar dedicada a la construcción, con atención tanto a grandes empresas como a pequeños consumidores. Contamos con una gran flota de equipos de primera marca para atender las necesidades de cada cliente.</p>
+        <p style="font-size:16px;color:rgba(239,238,233,0.78);margin:0;max-width:440px;">Somos una empresa familiar dedicada a la construcción, con atención tanto a grandes empresas como a pequeños consumidores. Contamos con una gran flota de equipos de primera marca para atender las necesidades de cada cliente.</p>
       </div>
     </div>
   </section>
 
   <!-- CONOCÉ LA CANTERA — full-bleed video de fondo -->
   <section class="cp-video-hero" style="border-top:2px solid rgba(20,19,17,0.28);position:relative;min-height:640px;overflow:hidden;background:#141311;display:flex;align-items:center;justify-content:center;">
-    <img src="uploads/foto_portada_web_palumbo (3).png" alt="Vista aérea de la cantera Palumbo, camión y cinta transportadora" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.18) brightness(0.82) saturate(0.92);"/>
+    <img src="uploads/img/cantera-aerea-anchoris.webp" loading="lazy" alt="Vista aérea de la cantera Palumbo, camión y cinta transportadora" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.18) brightness(0.82) saturate(0.92);"/>
     <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,17,0.35) 0%,rgba(20,19,17,0.15) 40%,rgba(20,19,17,0.65) 100%);"></div>
     <div style="position:relative;z-index:1;text-align:center;color:#efeee9;padding:28px 40px;background:rgba(20,19,17,0.72);">
       <h6 style="font-size:12px;font-weight:800;letter-spacing:0.16em;color:#9dab74;margin:0 0 20px;">CONOCÉ LA CANTERA</h6>
@@ -169,19 +171,19 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
           <div style="padding:32px;border-radius:20px;background:#1c1a17;box-shadow:0 20px 44px rgba(0,0,0,0.35);">
             <div style="font-weight:900;font-size:clamp(26px,3vw,36px);color:#9dab74;margin-bottom:12px;">Cantera propia</div>
-            <div style="font-size:16px;color:rgba(239,238,233,0.6);">Control directo sobre calidad y disponibilidad, en Anchoris, Luján de Cuyo.</div>
+            <div style="font-size:16px;color:rgba(239,238,233,0.75);">Control directo sobre calidad y disponibilidad, en Anchoris, Luján de Cuyo.</div>
           </div>
           <div style="padding:32px;border-radius:20px;background:#1c1a17;box-shadow:0 20px 44px rgba(0,0,0,0.35);">
             <div style="font-weight:900;font-size:clamp(26px,3vw,36px);color:#9dab74;margin-bottom:12px;">Flota propia</div>
-            <div style="font-size:16px;color:rgba(239,238,233,0.6);">Equipos de primera marca, preparados para sostener el ritmo de cualquier obra.</div>
+            <div style="font-size:16px;color:rgba(239,238,233,0.75);">Equipos de primera marca, preparados para sostener el ritmo de cualquier obra.</div>
           </div>
           <div style="padding:32px;border-radius:20px;background:#1c1a17;box-shadow:0 20px 44px rgba(0,0,0,0.35);">
             <div style="font-weight:900;font-size:clamp(26px,3vw,36px);color:#9dab74;margin-bottom:12px;">Stock permanente</div>
-            <div style="font-size:16px;color:rgba(239,238,233,0.6);">Material listo para despachar, a la puerta de tu obra, sin demoras.</div>
+            <div style="font-size:16px;color:rgba(239,238,233,0.75);">Material listo para despachar, a la puerta de tu obra, sin demoras.</div>
           </div>
           <div style="padding:32px;border-radius:20px;background:#1c1a17;box-shadow:0 20px 44px rgba(0,0,0,0.35);">
             <div style="font-weight:900;font-size:clamp(26px,3vw,36px);color:#9dab74;margin-bottom:12px;">+40 años</div>
-            <div style="font-size:16px;color:rgba(239,238,233,0.6);">De trayectoria familiar en el rubro de la construcción.</div>
+            <div style="font-size:16px;color:rgba(239,238,233,0.75);">De trayectoria familiar en el rubro de la construcción.</div>
           </div>
         </div>
       </div>
@@ -205,11 +207,11 @@
         <div class="cp-marquee-track" style="display:flex;width:max-content;animation:cp-scroll-products 34s linear infinite;">
           <sc-for list="{{ productsLoop }}" as="p" hint-placeholder-count="12">
             <a href="Productos.dc.html" class="cp-link cp-prod-card" style="display:flex;flex-direction:column;width:280px;flex:none;margin:0 8px;">
-              <div style="aspect-ratio:4/3;transition:filter .25s;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);"><image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.placeholder }}" alt="{{ p.alt }}"></image-slot></div>
+              <div style="aspect-ratio:4/3;transition:filter .25s;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);"><image-slot id="{{ p.slotId }}" src="uploads/img/{{ p.slotId }}.webp" shape="rect" placeholder="{{ p.placeholder }}" alt="{{ p.alt }}"></image-slot></div>
               <div style="padding:24px;">
-                <div style="font-weight:800;font-size:13px;color:rgba(20,19,17,0.4);margin-bottom:8px;">{{ p.n }}</div>
+                <div style="font-weight:800;font-size:13px;color:rgba(20,19,17,0.56);margin-bottom:8px;">{{ p.n }}</div>
                 <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">{{ p.name }}</div>
-                <div style="font-size:14px;color:rgba(20,19,17,0.62);">{{ p.desc }}</div>
+                <div style="font-size:14px;color:rgba(20,19,17,0.72);">{{ p.desc }}</div>
               </div>
             </a>
           </sc-for>
@@ -232,15 +234,15 @@
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 20px;">RETIRO Y ENTREGA</h6>
         <div class="cp-product-grid" style="display:grid;gap:24px;">
           <div style="display:flex;flex-direction:column;">
-            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-cantera" shape="rect" placeholder="Foto: carga en cantera" alt="Carga en cantera Anchoris"></image-slot></div>
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-cantera" src="uploads/img/serv-cantera.webp" shape="rect" placeholder="Foto: carga en cantera" alt="Carga en cantera Anchoris"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Retiro en cantera</div>
           </div>
           <div style="display:flex;flex-direction:column;">
-            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-deposito" shape="rect" placeholder="Foto: depósito minorista" alt="Carga en depósito minorista de Godoy Cruz"></image-slot></div>
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-deposito" src="uploads/img/serv-deposito.webp" shape="rect" placeholder="Foto: depósito minorista" alt="Carga en depósito minorista de Godoy Cruz"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Retiro en depósito</div>
           </div>
           <div style="display:flex;flex-direction:column;">
-            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-entrega-obra" shape="rect" placeholder="Foto: camión 6m3 en obra" alt="Entrega en obras particulares con camión 6m3"></image-slot></div>
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-entrega-obra" src="uploads/img/serv-entrega-obra.webp" shape="rect" placeholder="Foto: camión 6m3 en obra" alt="Entrega en obras particulares con camión 6m3"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Entrega directa en obra</div>
           </div>
         </div>
@@ -249,18 +251,18 @@
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 20px;">ALQUILER DE EQUIPOS</h6>
         <div class="cp-product-grid" style="display:grid;gap:24px;">
           <div style="display:flex;flex-direction:column;">
-            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-bateas" shape="rect" placeholder="Foto: batea" alt="Alquiler de bateas"></image-slot></div>
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-bateas" src="uploads/img/serv-bateas.webp" shape="rect" placeholder="Foto: batea" alt="Alquiler de bateas"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Alquiler de batea</div>
           </div>
           <div style="display:flex;flex-direction:column;">
-            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-camion-6x4-v2" src="uploads/camion-descargando-arena-anchoris-palumbo.png" shape="rect" placeholder="Foto: camión 6x4 con volcadora" alt="Alquiler de camiones 6x4 con volcadora"></image-slot></div>
+            <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;"><image-slot id="serv-camion-6x4-v2" src="uploads/img/serv-camion-6x4.webp" shape="rect" placeholder="Foto: camión 6x4 con volcadora" alt="Alquiler de camiones 6x4 con volcadora"></image-slot></div>
             <div style="font-weight:900;font-size:20px;letter-spacing:-0.01em;margin-bottom:6px;color:#141311;">Alquiler de camión 6x4</div>
           </div>
           <div style="display:flex;flex-direction:column;">
             <div style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);margin-bottom:20px;background:#141311;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:24px;gap:14px;">
               <div style="font-weight:900;font-size:18px;color:#efeee9;">¿Necesitás otro equipo?</div>
-              <div style="font-size:13px;color:rgba(239,238,233,0.68);">Consultanos por WhatsApp y te decimos qué tenemos disponible.</div>
-              <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link cp-btn-primary" style="display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;padding:12px 18px;">Pedir cotización por WhatsApp</a>
+              <div style="font-size:13px;color:rgba(239,238,233,0.78);">Consultanos por WhatsApp y te decimos qué tenemos disponible.</div>
+              <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link" style="background:#5f6f3d;color:#fff;display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:12px;letter-spacing:0.04em;text-transform:uppercase;padding:12px 18px;">Pedir cotización por WhatsApp</a>
             </div>
           </div>
         </div>
@@ -275,7 +277,7 @@
       <div>
         <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#9dab74;margin:0 0 16px;">A QUIÉN LE VENDEMOS</h6>
         <h2 style="font-weight:900;font-size:clamp(30px,3.8vw,54px);line-height:1.06;letter-spacing:-0.015em;margin:0 0 28px;max-width:760px;">¿Sos hormigonera, constructora, desarrollista o arquitecto? Contactanos.</h2>
-        <p style="font-size:18px;color:rgba(239,238,233,0.68);margin:0 0 36px;max-width:600px;">Tenemos stock permanente y cumplimos en tiempo y forma, obra tras obra.</p>
+        <p style="font-size:18px;color:rgba(239,238,233,0.78);margin:0 0 36px;max-width:600px;">Tenemos stock permanente y cumplimos en tiempo y forma, obra tras obra.</p>
         <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link" style="display:inline-flex;align-items:center;gap:10px;background:#5f6f3d;color:#fff;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;padding:18px 30px;">Pedir cotización por WhatsApp<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
     </div>
@@ -300,7 +302,7 @@
           </div>
           <div style="font-weight:900;font-size:12px;color:#5f6f3d;margin-bottom:8px;">PASO 01</div>
           <h4 style="font-weight:800;font-size:16px;margin:0 0 8px;">Consultá por WhatsApp</h4>
-          <p style="font-size:14px;color:rgba(20,19,17,0.6);margin:0;">Contanos qué material y qué cantidad necesitás.</p>
+          <p style="font-size:14px;color:rgba(20,19,17,0.72);margin:0;">Contanos qué material y qué cantidad necesitás.</p>
         </div>
 
         <div style="position:relative;z-index:1;padding:0 20px;text-align:center;">
@@ -309,7 +311,7 @@
           </div>
           <div style="font-weight:900;font-size:12px;color:#5f6f3d;margin-bottom:8px;">PASO 02</div>
           <h4 style="font-weight:800;font-size:16px;margin:0 0 8px;">Precio y disponibilidad</h4>
-          <p style="font-size:14px;color:rgba(20,19,17,0.6);margin:0;">Te confirmamos stock y cotización al instante.</p>
+          <p style="font-size:14px;color:rgba(20,19,17,0.72);margin:0;">Te confirmamos stock y cotización al instante.</p>
         </div>
 
         <div style="position:relative;z-index:1;padding:0 20px;text-align:center;">
@@ -318,7 +320,7 @@
           </div>
           <div style="font-weight:900;font-size:12px;color:#5f6f3d;margin-bottom:8px;">PASO 03</div>
           <h4 style="font-weight:800;font-size:16px;margin:0 0 8px;">Coordinamos la logística</h4>
-          <p style="font-size:14px;color:rgba(20,19,17,0.6);margin:0;">Retiro en cantera o depósito, o entrega directa en tu obra.</p>
+          <p style="font-size:14px;color:rgba(20,19,17,0.72);margin:0;">Retiro en cantera o depósito, o entrega directa en tu obra.</p>
         </div>
 
         <div style="position:relative;z-index:1;padding:0 20px;text-align:center;">
@@ -327,7 +329,7 @@
           </div>
           <div style="font-weight:900;font-size:12px;color:#5f6f3d;margin-bottom:8px;">PASO 04</div>
           <h4 style="font-weight:800;font-size:16px;margin:0 0 8px;">Recibís el material</h4>
-          <p style="font-size:14px;color:rgba(20,19,17,0.6);margin:0;">Despacho puntual, a la puerta de la obra.</p>
+          <p style="font-size:14px;color:rgba(20,19,17,0.72);margin:0;">Despacho puntual, a la puerta de la obra.</p>
         </div>
       </div>
     </div>
@@ -357,6 +359,7 @@
           <div style="padding:20px 24px;background:#efeee9;">
             <div style="font-size:13px;font-weight:800;letter-spacing:0.1em;color:#5f6f3d;margin-bottom:8px;">DEPÓSITO</div>
             <div style="font-weight:700;font-size:18px;">Juan Manuel Fangio 587 — Godoy Cruz</div>
+            <div style="font-size:14px;color:rgba(20,19,17,0.72);margin-top:6px;">Lunes a viernes · 8 a 17 h</div>
           </div>
         </div>
       </div>
@@ -378,7 +381,7 @@
                 <span style="flex:none;font-weight:900;font-size:20px;color:#5f6f3d;transform:{{ f.rotate }};transition:transform .2s;display:inline-block;">+</span>
               </button>
               <sc-if value="{{ f.open }}">
-                <p style="margin:0 0 24px;font-size:15px;color:rgba(20,19,17,0.65);max-width:640px;">{{ f.a }}</p>
+                <p style="margin:0 0 24px;font-size:15px;color:rgba(20,19,17,0.74);max-width:640px;">{{ f.a }}</p>
               </sc-if>
             </div>
           </sc-for>
@@ -396,7 +399,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-1.746-.872-2.89-1.554-4.036-3.524-.298-.51.298-.474.85-1.579.099-.199.05-.371-.05-.52-.099-.15-.671-1.612-.917-2.207-.245-.596-.495-.515-.67-.524-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04.986-1.04 2.383 0 1.397 1.014 2.744 1.155 2.947.14.198 1.917 3.11 4.783 4.145 2.34.834 3.29.729 3.99.612.699-.117 1.746-1.19 2.15-2.014.401-.836.401-1.556.281-1.706-.12-.15-.406-.245-.703-.398zM12.001 2C6.478 2 2 6.478 2 12.001c0 1.995.588 3.85 1.596 5.408L2.4 21.6l4.32-1.14A9.955 9.955 0 0 0 12.001 22C17.524 22 22 17.522 22 12.001 22 6.478 17.524 2 12.001 2zm0 18.2a8.17 8.17 0 0 1-4.166-1.14l-.299-.178-3.089.815.826-3.012-.196-.31A8.19 8.19 0 0 1 3.8 12.001C3.8 7.47 7.47 3.8 12.001 3.8c4.53 0 8.199 3.67 8.199 8.201 0 4.53-3.67 8.199-8.199 8.199z"/></svg>
           Pedir cotización por WhatsApp
         </a>
-        <div style="font-size:14px;color:rgba(239,238,233,0.6);">Respuesta con precio y disponibilidad al instante.</div>
+        <div style="font-size:14px;color:rgba(239,238,233,0.75);">Respuesta con precio y disponibilidad al instante.</div>
       </div>
     </div>
   </section>
@@ -406,7 +409,7 @@
     <div class="cp-footer-grid" style="max-width:1600px;margin:0 auto;padding:64px 32px 32px;display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:32px;">
       <div>
         <img src="uploads/LOGO-NUEVO-768x426.png" alt="Cantera Palumbo" style="height:50px;width:auto;display:block;margin-bottom:20px;" />
-        <p style="font-size:14px;margin:0;max-width:280px;color:rgba(20,19,17,0.6);">Empresa familiar dedicada a la extracción y comercialización de áridos, con más de 40 años en el rubro.</p>
+        <p style="font-size:14px;margin:0;max-width:280px;color:rgba(20,19,17,0.72);">Empresa familiar dedicada a la extracción y comercialización de áridos, con más de 40 años en el rubro.</p>
       </div>
       <div>
         <h6 style="font-size:11px;font-weight:800;letter-spacing:0.12em;color:#141311;margin:0 0 18px;">NAVEGACIÓN</h6>
@@ -422,14 +425,14 @@
       </div>
       <div>
         <h6 style="font-size:11px;font-weight:800;letter-spacing:0.12em;color:#141311;margin:0 0 18px;">DEPÓSITO Y CONTACTO</h6>
-        <p style="font-size:14px;margin:0 0 10px;">Juan Manuel Fangio 587<br/>Godoy Cruz, Mendoza</p>
+        <p style="font-size:14px;margin:0 0 10px;">Juan Manuel Fangio 587<br/>Godoy Cruz, Mendoza<br/>Lun a vie · 8 a 17 h</p>
         <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">261 205-9198</a>
       </div>
     </div>
-    <div style="max-width:1600px;margin:0 auto;padding:20px 32px 40px;border-top:1px solid rgba(20,19,17,0.16);font-size:12px;color:rgba(20,19,17,0.5);">© {{ year }} Cantera Palumbo. Todos los derechos reservados.</div>
+    <div style="max-width:1600px;margin:0 auto;padding:20px 32px 40px;border-top:1px solid rgba(20,19,17,0.16);font-size:12px;color:rgba(20,19,17,0.64);">© {{ year }} Cantera Palumbo. Todos los derechos reservados.</div>
   </footer>
 
-  <button onClick="{{ scrollTop }}" aria-label="Volver arriba" style="position:fixed;bottom:96px;right:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:#141311;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.25);opacity:{{ showTopOpacity }};visibility:{{ showTopVisibility }};transition:opacity .3s;">
+  <button onClick="{{ scrollTop }}" aria-label="Volver arriba" class="cp-totop" style="position:fixed;bottom:96px;right:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:#141311;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.25);opacity:{{ showTopOpacity }};visibility:{{ showTopVisibility }};transition:opacity .3s;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#efeee9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
   </button>
 
