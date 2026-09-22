@@ -20,7 +20,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Cantera Palumbo","description":"Extracción y venta de áridos en Anchoris, Luján de Cuyo, Mendoza. Arena, ripio, estabilizado, tierra y piedra bola. Retiro en cantera o depósito y entrega en obra.","telephone":"+54 9 261 205-9198","image":"https://jofreflorenciam-art.github.io/cantera-palumbo/uploads/img/og-cantera-palumbo.jpg","logo":"https://jofreflorenciam-art.github.io/cantera-palumbo/uploads/LOGO-NUEVO-768x426.png","url":"https://jofreflorenciam-art.github.io/cantera-palumbo/","areaServed":"Mendoza, Argentina","department":[{"@type":"LocalBusiness","name":"Cantera Palumbo — Cantera Anchoris","telephone":"+54 9 261 205-9198","address":{"@type":"PostalAddress","streetAddress":"Ruta 40, km 51","addressLocality":"Anchoris, Luján de Cuyo","addressRegion":"Mendoza","addressCountry":"AR"}},{"@type":"LocalBusiness","name":"Cantera Palumbo — Depósito Godoy Cruz","telephone":"+54 9 261 205-9198","address":{"@type":"PostalAddress","streetAddress":"Juan Manuel Fangio 587","addressLocality":"Godoy Cruz","addressRegion":"Mendoza","addressCountry":"AR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Cantera Palumbo","description":"Extracción y venta de áridos en Anchoris, Luján de Cuyo, Mendoza. Arena, ripio, estabilizado, tierra y piedra bola. Retiro en cantera o depósito y entrega en obra.","telephone":"+54 9 261 205-9198","image":"https://jofreflorenciam-art.github.io/cantera-palumbo/uploads/img/og-cantera-palumbo.jpg","logo":"https://jofreflorenciam-art.github.io/cantera-palumbo/uploads/LOGO-NUEVO-768x426.png","url":"https://jofreflorenciam-art.github.io/cantera-palumbo/","areaServed":"Gran Mendoza, Argentina","sameAs":["https://www.instagram.com/canterapalumbo/"],"department":[{"@type":"LocalBusiness","name":"Cantera Palumbo — Cantera Anchoris","telephone":"+54 9 261 205-9198","address":{"@type":"PostalAddress","streetAddress":"Ruta 40, km 51","addressLocality":"Anchoris, Luján de Cuyo","addressRegion":"Mendoza","addressCountry":"AR"}},{"@type":"LocalBusiness","name":"Cantera Palumbo — Depósito Godoy Cruz","telephone":"+54 9 261 205-9198","address":{"@type":"PostalAddress","streetAddress":"Juan Manuel Fangio 587","addressLocality":"Godoy Cruz","addressRegion":"Mendoza","addressCountry":"AR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}]}]}</script>
 <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
 <script src="./support.js"></script>
@@ -58,6 +58,8 @@
     @keyframes cp-scroll-hero { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     @keyframes cp-scroll-products { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .cp-prod-card:hover .cp-grayscale { filter: none; }
+    .cp-prod-grid-m { display: none; }
+    @media (max-width: 760px) { .cp-prod-grid-m { display: grid !important; } .cp-prod-marquee { display: none !important; } }
     @media (max-width: 900px) {
       .cp-header-logo { height: 48px !important; }
       .cp-totop { display: none !important; }
@@ -85,8 +87,8 @@
       </a>
       <nav class="cp-desktop-nav" style="align-items:center;gap:40px;font-size:16px;">
         <a href="index.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Inicio</a>
-        <a href="Productos.dc.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Productos</a>
-        <a href="Contacto.dc.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Contacto</a>
+        <a href="productos.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Productos</a>
+        <a href="contacto.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Contacto</a>
       </nav>
       <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link cp-btn-primary cp-desktop-cta" style="align-items:center;gap:10px;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:14px 24px;">
         Pedir cotización
@@ -98,8 +100,8 @@
     <sc-if value="{{ menuOpen }}">
       <div style="display:flex;flex-direction:column;border-top:2px solid rgba(20,19,17,0.28);padding:20px 32px;gap:18px;">
         <a href="index.html" class="cp-link" style="color:#141311;font-weight:800;font-size:16px;">Inicio</a>
-        <a href="Productos.dc.html" class="cp-link" style="color:#141311;font-weight:800;font-size:16px;">Productos</a>
-        <a href="Contacto.dc.html" class="cp-link" style="color:#141311;font-weight:800;font-size:16px;">Contacto</a>
+        <a href="productos.html" class="cp-link" style="color:#141311;font-weight:800;font-size:16px;">Productos</a>
+        <a href="contacto.html" class="cp-link" style="color:#141311;font-weight:800;font-size:16px;">Contacto</a>
         <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link cp-btn-primary" style="font-weight:800;font-size:14px;padding:14px 18px;text-align:left;text-transform:uppercase;">Pedir cotización</a>
       </div>
     </sc-if>
@@ -215,13 +217,23 @@
             <h6 style="font-size:12px;font-weight:800;letter-spacing:0.14em;color:#5f6f3d;margin:0 0 16px;">PRODUCTOS</h6>
             <h2 style="font-weight:900;font-size:clamp(30px,3.4vw,48px);line-height:1.06;letter-spacing:-0.015em;margin:0;">El material justo para cada etapa de la obra.</h2>
           </div>
-          <a href="Productos.dc.html" class="cp-link" style="display:inline-flex;align-items:center;gap:8px;color:#141311;font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;border-bottom:2px solid #141311;padding-bottom:4px;white-space:nowrap;">Ver todos<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a href="productos.html" class="cp-link" style="display:inline-flex;align-items:center;gap:8px;color:#141311;font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;border-bottom:2px solid #141311;padding-bottom:4px;white-space:nowrap;">Ver todos<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         </div>
       </div>
-      <div class="cp-marquee" style="border-top:2px solid rgba(20,19,17,0.28);overflow:hidden;">
+      <div class="cp-prod-grid-m" style="border-top:2px solid rgba(20,19,17,0.28);padding-top:20px;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px;">
+        <sc-for list="{{ productsGrid }}" as="p" hint-placeholder-count="6">
+          <a href="productos.html" class="cp-link" style="display:flex;flex-direction:column;">
+            <div style="aspect-ratio:4/3;border-radius:12px;overflow:hidden;box-shadow:0 10px 24px rgba(20,19,17,0.15);margin-bottom:10px;"><img src="uploads/img/{{ p.slotId }}.webp" alt="{{ p.alt }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+            <div style="font-weight:800;font-size:11px;color:rgba(20,19,17,0.56);margin-bottom:4px;">{{ p.n }}</div>
+            <div style="font-weight:900;font-size:16px;letter-spacing:-0.01em;margin-bottom:4px;color:#141311;">{{ p.name }}</div>
+            <div style="font-size:13px;line-height:1.35;color:rgba(20,19,17,0.72);text-wrap:pretty;">{{ p.desc }}</div>
+          </a>
+        </sc-for>
+      </div>
+      <div class="cp-marquee cp-prod-marquee" style="border-top:2px solid rgba(20,19,17,0.28);overflow:hidden;">
         <div class="cp-marquee-track" style="display:flex;width:max-content;animation:cp-scroll-products 34s linear infinite;">
           <sc-for list="{{ productsLoop }}" as="p" hint-placeholder-count="12">
-            <a href="Productos.dc.html" class="cp-link cp-prod-card" style="display:flex;flex-direction:column;width:280px;flex:none;margin:0 8px;">
+            <a href="productos.html" class="cp-link cp-prod-card" style="display:flex;flex-direction:column;width:280px;flex:none;margin:0 8px;">
               <div style="aspect-ratio:4/3;transition:filter .25s;border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(20,19,17,0.15);"><image-slot id="{{ p.slotId }}" src="uploads/img/{{ p.slotId }}.webp" shape="rect" placeholder="{{ p.placeholder }}" alt="{{ p.alt }}"></image-slot></div>
               <div style="padding:24px;">
                 <div style="font-weight:800;font-size:13px;color:rgba(20,19,17,0.56);margin-bottom:8px;">{{ p.n }}</div>
@@ -430,8 +442,8 @@
         <h6 style="font-size:11px;font-weight:800;letter-spacing:0.12em;color:#141311;margin:0 0 18px;">NAVEGACIÓN</h6>
         <div style="display:flex;flex-direction:column;gap:12px;">
           <a href="index.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Inicio</a>
-          <a href="Productos.dc.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Productos</a>
-          <a href="Contacto.dc.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Contacto</a>
+          <a href="productos.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Productos</a>
+          <a href="contacto.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Contacto</a>
         </div>
       </div>
       <div>
@@ -442,6 +454,7 @@
         <h6 style="font-size:11px;font-weight:800;letter-spacing:0.12em;color:#141311;margin:0 0 18px;">DEPÓSITO Y CONTACTO</h6>
         <p style="font-size:14px;margin:0 0 10px;">Juan Manuel Fangio 587<br/>Godoy Cruz, Mendoza<br/>Lun a vie · 8 a 17 h</p>
         <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">261 205-9198</a>
+        <div style="margin-top:10px;"><a href="https://www.instagram.com/canterapalumbo/" target="_blank" rel="noopener" aria-label="Instagram de Cantera Palumbo" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;display:inline-flex;align-items:center;gap:8px;"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset="0.05" stop-color="#fdf497"/><stop offset="0.45" stop-color="#fd5949"/><stop offset="0.6" stop-color="#d6249f"/><stop offset="0.9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-grad)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.4" cy="7.6" r="1.1" fill="#fff"/></svg>Cantera Palumbo</a></div>
       </div>
     </div>
     <div style="max-width:1600px;margin:0 auto;padding:20px 32px 40px;border-top:1px solid rgba(20,19,17,0.16);font-size:12px;color:rgba(20,19,17,0.64);">© {{ year }} Cantera Palumbo. Todos los derechos reservados.</div>
@@ -465,6 +478,15 @@ class Component extends DCLogic {
   componentDidMount() {
     this._onScroll = () => this.setState(s => s.showTop === (window.scrollY > 600) ? null : { showTop: window.scrollY > 600 });
     window.addEventListener('scroll', this._onScroll, { passive: true });
+    setTimeout(() => {
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      this._io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; this._io.unobserve(e.target); } }), { threshold: 0.08 });
+      [...document.querySelectorAll('section')].slice(1).forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) return;
+        el.style.opacity = '0'; el.style.transform = 'translateY(16px)'; el.style.transition = 'opacity .5s ease, transform .5s ease';
+        this._io.observe(el);
+      });
+    }, 0);
   }
 
   componentWillUnmount() {
@@ -477,9 +499,21 @@ class Component extends DCLogic {
       { q: '¿Hacen entregas en obra?', a: 'Sí. Contamos con stock permanente y flota propia para despachar arena, ripio, estabilizado y tierra directo a la puerta de tu obra.' },
       { q: '¿Puedo retirar el material yo mismo?', a: 'Sí, podés retirar en cantera (Anchoris, Ruta 40 km 51, Luján de Cuyo) o en nuestro depósito de Godoy Cruz.' },
       { q: '¿Venden a particulares o solo a empresas?', a: 'A ambos. Atendemos desde grandes constructoras y obras públicas hasta pequeños consumidores particulares.' },
+      { q: '¿A qué zonas entregan?', a: 'Entregamos en todo el Gran Mendoza: Godoy Cruz, Capital, Guaymallén, Maipú, Las Heras y Luján de Cuyo.' },
+      { q: '¿No sé qué material necesito, me asesoran?', a: 'Sí. Contanos qué vas a hacer (contrapiso, base, relleno, hormigón) y te recomendamos el material y la cantidad.' },
+      { q: '¿Cuál es el horario del depósito?', a: 'Lunes a viernes de 8 a 17 h. La carga en cantera se coordina por WhatsApp.' },
       { q: '¿Cómo pido una cotización?', a: 'Escribinos por WhatsApp con el material y la cantidad que necesitás, y te respondemos con precio y disponibilidad.' },
     ];
+    const productsGrid = [
+      { n: '01', slotId: 'p-arena', name: 'Arena', desc: 'Para mezclas, revoques y hormigones.', alt: 'Arena de Anchoris' },
+      { n: '02', slotId: 'p-ripio', name: 'Ripio 6/20', desc: 'Hormigones y bases que requieren resistencia.', alt: 'Ripio 6/20' },
+      { n: '03', slotId: 'p-ripio50', name: 'Ripio 30/50', desc: 'Bases de mayor espesor y drenaje.', alt: 'Ripio 30/50' },
+      { n: '04', slotId: 'p-estabilizado', name: 'Estabilizado', desc: 'Bases de caminos y accesos de obra.', alt: 'Material estabilizado' },
+      { n: '05', slotId: 'p-tierra', name: 'Tierra de jardín', desc: 'Relleno y nivelación de terrenos.', alt: 'Tierra de jardín' },
+      { n: '06', slotId: 'p-piedrabola', name: 'Piedra bola', desc: 'Drenajes y terminaciones decorativas.', alt: 'Piedra bola' },
+    ];
     return {
+      productsGrid,
       waLink: wa,
       year: new Date().getFullYear(),
       showTopOpacity: this.state.showTop ? 1 : 0,
@@ -498,6 +532,7 @@ class Component extends DCLogic {
         ];
         return list.concat(list.map(p => ({ ...p, _dup: true })));
       })(),
+
       sectors: [
         { n: '01', name: 'Constructoras' },
         { n: '02', name: 'Obra pública' },

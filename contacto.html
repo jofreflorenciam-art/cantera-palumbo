@@ -15,8 +15,8 @@
 <meta property="og:title" content="Contacto | Cantera Palumbo">
 <meta property="og:description" content="Pedí tu cotización por WhatsApp. Cantera en Anchoris y depósito en Godoy Cruz (lun a vie, 8 a 17 h).">
 <meta property="og:image" content="https://jofreflorenciam-art.github.io/cantera-palumbo/uploads/img/og-cantera-palumbo.jpg">
-<meta property="og:url" content="https://jofreflorenciam-art.github.io/cantera-palumbo/Contacto.dc.html">
-<link rel="canonical" href="https://jofreflorenciam-art.github.io/cantera-palumbo/Contacto.dc.html">
+<meta property="og:url" content="https://jofreflorenciam-art.github.io/cantera-palumbo/contacto.html">
+<link rel="canonical" href="https://jofreflorenciam-art.github.io/cantera-palumbo/contacto.html">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -51,7 +51,10 @@
     @media (max-width: 700px) {
       .cp-footer-grid { grid-template-columns: 1fr 1fr !important; }
     }
+    .cp-only-m { display: none !important; }
     @media (max-width: 900px) {
+      .cp-only-m { display: block !important; }
+      .cp-only-d { display: none !important; }
       .cp-header-logo { height: 48px !important; }
       .cp-totop { display: none !important; }
       .cp-desktop-nav, .cp-desktop-cta { display: none; }
@@ -69,8 +72,8 @@
       </a>
       <nav class="cp-desktop-nav" style="align-items:center;gap:36px;">
         <a href="index.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Inicio</a>
-        <a href="Productos.dc.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Productos</a>
-        <a href="Contacto.dc.html" class="cp-link" style="color:#5f6f3d;font-weight:800;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Contacto</a>
+        <a href="productos.html" class="cp-link" style="color:#141311;font-weight:700;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Productos</a>
+        <a href="contacto.html" class="cp-link" style="color:#5f6f3d;font-weight:800;font-size:15px;letter-spacing:0.08em;text-transform:uppercase;">Contacto</a>
       </nav>
       <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link cp-btn-primary cp-desktop-cta" style="align-items:center;gap:10px;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:14px 24px;">Pedir cotización</a>
       <button onClick="{{ toggleMenu }}" aria-label="Menú" class="cp-mobile-btn" style="background:transparent;border:2px solid #141311;padding:8px;cursor:pointer;color:#141311;">
@@ -80,8 +83,8 @@
     <sc-if value="{{ menuOpen }}">
       <div style="display:flex;flex-direction:column;border-top:2px solid rgba(20,19,17,0.28);padding:20px 32px;gap:18px;">
         <a href="index.html" class="cp-link" style="color:#141311;font-weight:800;font-size:16px;">Inicio</a>
-        <a href="Productos.dc.html" class="cp-link" style="color:#141311;font-weight:800;font-size:16px;">Productos</a>
-        <a href="Contacto.dc.html" class="cp-link" style="color:#5f6f3d;font-weight:800;font-size:16px;">Contacto</a>
+        <a href="productos.html" class="cp-link" style="color:#141311;font-weight:800;font-size:16px;">Productos</a>
+        <a href="contacto.html" class="cp-link" style="color:#5f6f3d;font-weight:800;font-size:16px;">Contacto</a>
         <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link cp-btn-primary" style="font-weight:800;font-size:14px;padding:14px 18px;text-align:left;text-transform:uppercase;">Pedir cotización</a>
       </div>
     </sc-if>
@@ -136,8 +139,10 @@
     <div style="max-width:1400px;margin:0 auto;padding:clamp(56px,8vw,96px) 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border-top:1px solid rgba(239,238,233,0.2);border-left:1px solid rgba(239,238,233,0.2);">
       <div style="padding:32px;border-right:1px solid rgba(239,238,233,0.2);border-bottom:1px solid rgba(239,238,233,0.2);">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9dab74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:16px;"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-        <div style="font-size:12px;font-weight:800;letter-spacing:0.1em;color:rgba(239,238,233,0.72);margin-bottom:8px;">TELÉFONO / WHATSAPP</div>
-        <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link" style="color:#efeee9;font-weight:900;font-size:22px;">261 205-9198</a>
+        <div class="cp-only-d" style="font-size:12px;font-weight:800;letter-spacing:0.1em;color:rgba(239,238,233,0.72);margin-bottom:8px;">TELÉFONO / WHATSAPP</div>
+        <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link cp-only-d" style="color:#efeee9;font-weight:900;font-size:22px;">261 205-9198</a>
+        <div class="cp-only-m" style="font-size:12px;font-weight:800;letter-spacing:0.1em;color:rgba(239,238,233,0.72);margin-bottom:8px;">TELÉFONO</div>
+        <a href="tel:+5492612059198" class="cp-link cp-only-m" style="color:#efeee9;font-weight:900;font-size:22px;">261 205-9198</a>
       </div>
       <div style="padding:32px;border-right:1px solid rgba(239,238,233,0.2);border-bottom:1px solid rgba(239,238,233,0.2);">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9dab74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:16px;"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
@@ -177,8 +182,8 @@
         <h6 style="font-size:11px;font-weight:800;letter-spacing:0.12em;color:#141311;margin:0 0 18px;">NAVEGACIÓN</h6>
         <div style="display:flex;flex-direction:column;gap:12px;">
           <a href="index.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Inicio</a>
-          <a href="Productos.dc.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Productos</a>
-          <a href="Contacto.dc.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Contacto</a>
+          <a href="productos.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Productos</a>
+          <a href="contacto.html" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">Contacto</a>
         </div>
       </div>
       <div>
@@ -189,6 +194,7 @@
         <h6 style="font-size:11px;font-weight:800;letter-spacing:0.12em;color:#141311;margin:0 0 18px;">DEPÓSITO Y CONTACTO</h6>
         <p style="font-size:14px;margin:0 0 10px;">Juan Manuel Fangio 587<br/>Godoy Cruz, Mendoza<br/>Lun a vie · 8 a 17 h</p>
         <a href="{{ waLink }}" target="_blank" rel="noopener" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;">261 205-9198</a>
+        <div style="margin-top:10px;"><a href="https://www.instagram.com/canterapalumbo/" target="_blank" rel="noopener" aria-label="Instagram de Cantera Palumbo" class="cp-link" style="color:rgba(20,19,17,0.72);font-size:14px;display:inline-flex;align-items:center;gap:8px;"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset="0.05" stop-color="#fdf497"/><stop offset="0.45" stop-color="#fd5949"/><stop offset="0.6" stop-color="#d6249f"/><stop offset="0.9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig-grad)"/><rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.4" cy="7.6" r="1.1" fill="#fff"/></svg>Cantera Palumbo</a></div>
       </div>
     </div>
     <div style="max-width:1400px;margin:0 auto;padding:20px 32px 40px;border-top:1px solid rgba(20,19,17,0.16);font-size:12px;color:rgba(20,19,17,0.64);">© {{ year }} Cantera Palumbo. Todos los derechos reservados.</div>
@@ -212,6 +218,15 @@ class Component extends DCLogic {
   componentDidMount() {
     this._onScroll = () => this.setState(s => s.showTop === (window.scrollY > 600) ? null : { showTop: window.scrollY > 600 });
     window.addEventListener('scroll', this._onScroll, { passive: true });
+    setTimeout(() => {
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      this._io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; this._io.unobserve(e.target); } }), { threshold: 0.08 });
+      [...document.querySelectorAll('section')].slice(1).forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) return;
+        el.style.opacity = '0'; el.style.transform = 'translateY(16px)'; el.style.transition = 'opacity .5s ease, transform .5s ease';
+        this._io.observe(el);
+      });
+    }, 0);
   }
 
   componentWillUnmount() {
